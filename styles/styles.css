@@ -1,31 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-.font-raleway{
-    font-family: "Raleway", sans-serif;
+.font-raleway {
+  font-family: "Raleway", sans-serif;
 }
 
-.font-inter{
-    font-family: "Inter", sans-serif;
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
 
 .custom-css {
-    background: url('../images/banner.png') center/cover no-repeat, linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%);
-    background-color: lightgray;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: url("../images/banner.png") center/cover no-repeat,
+    linear-gradient(180deg, rgba(3, 7, 18, 0.5) 0%, rgba(3, 7, 18, 0) 100%);
+  background-color: lightgray;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.main-css{
-    border-radius: 88px 88px 0px 0px;
-border-top: 2px solid #1DD100;
-background: #F7F8F8;
+.main-css {
+  border-radius: 88px 88px 0px 0px;
+  border-top: 2px solid #1dd100;
+  background: #f7f8f8;
 }
 
-.hr{
-    /* width: 744px; */
-/* height: 1px; */
-color: rgba(3, 7, 18, 0.20);
+.hr {
+  color: rgba(3, 7, 18, 0.2);
+}
+
+.vertical-dotted-line {
+  border-left: 2px dotted #0307124d;
+  height: 680px;
+}
+
+.input-wrapper {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.submit-btn {
+  position: absolute;
+  right:6px;
+  top: 4px;
+  /* padding: 4px 6px; */
 }
