@@ -36,15 +36,12 @@
 
 .input-wrapper {
   position: relative;
-  /* display: inline-block; */
 }
 
 .submit-btn {
   position: absolute;
   right:6px;
   top: 4px;
-  /* padding: 4px 6px; */
-  /* color: #1dd100; */
 }
 
 #child-container{

@@ -11,10 +11,6 @@ for (const btn of allBtn) {
     count += 1;
     newAvailableSeats -= 1;
 
-    // let a=event.target.innerText;
-
-    // setInnerText("seat-location",a)
-
     if (count < 5 && newAvailableSeats >= 4) {
       setInnerText("seat-increase", count);
       setInnerText("available-seats", newAvailableSeats);
@@ -28,15 +24,10 @@ for (const btn of allBtn) {
       alert("You can not select more than 4 seats");
     }
 
-    
-
-    //    console.log(document.getElementById(btn));
-    // if (count === 1) {
-    //   // setInnerText("seat-location",event.target.innerText)
-
-    // }
   });
 }
+
+
 
 function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
@@ -45,14 +36,11 @@ function setInnerText(id, value) {
 function applyCoupon() {
     const totalCost=parseFloat(document.getElementById("total-cost").innerText);
     const couponInput = document.getElementById("coupon-input").value;
-
-    
-
     if (couponInput === 'NEW15') {
-        const grandTotal = totalCost * 0.85; // 15% discount
+        const grandTotal = totalCost * 0.85;
         setInnerText("grand-total",grandTotal);
     } else if (couponInput === 'Couple 20') {
-        const grandTotal = totalCost * 0.8; // 20% discount
+        const grandTotal = totalCost * 0.8;
         setInnerText("grand-total",grandTotal);
     } else {
         alert('Invalid coupon code. Please enter a valid coupon.');
