@@ -21,7 +21,10 @@ for (const btn of allBtn) {
       event.target.style.backgroundColor = "#1dd100";
 
       event.target.disabled = true;
-    } else {
+      setInnerText("total-cost",(count*550));
+      setInnerText("grand-total",(count*550));
+    } 
+    else {
       alert("You can not select more than 4 seats");
     }
 
@@ -37,4 +40,29 @@ for (const btn of allBtn) {
 
 function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
+}
+
+function applyCoupon() {
+    const totalCost=parseFloat(document.getElementById("total-cost").innerText);
+    const couponInput = document.getElementById("coupon-input").value;
+
+    
+
+    if (couponInput === 'NEW15') {
+        const grandTotal = totalCost * 0.85; // 15% discount
+        setInnerText("grand-total",grandTotal);
+    } else if (couponInput === 'Couple 20') {
+        const grandTotal = totalCost * 0.8; // 20% discount
+        setInnerText("grand-total",grandTotal);
+    } else {
+        alert('Invalid coupon code. Please enter a valid coupon.');
+    }
+}
+
+function scrollToSection(sectionId) {
+    var targetSection = document.getElementById(sectionId);
+    window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+    });
 }
