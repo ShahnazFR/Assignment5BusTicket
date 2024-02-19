@@ -139,7 +139,7 @@
                                 class="flex bg-[#1DD10026] text-[#1DD100] w-[180px] h-[56px] rounded-xl p-4 pl-8 gap-2">
                                 <div><img src="images/seat-green.png" alt=""></div>
                                 <div>
-                                    <p><span>8</span> Seats left</p>
+                                    <p><span id="available-seats">8</span> Seats left</p>
                                 </div>
                             </div>
                         </div>
@@ -215,16 +215,16 @@
                         </div>
                     </div>
                     <div class="all-seats grid grid-cols-5 gap-2">
-                        <p class="text-[#03071280] text-[18px] font-inter font-medium">A</p>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium ">A1</button>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium ">A2</button>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium">A3</button>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium">A4</button>
-                        <p class="text-[#03071280] text-[18px] font-inter font-medium">B</p>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium">B1</button>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium">B2</button>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium">B3</button>
-                        <button class="btn text-[#03071280] text-[18px] font-inter font-medium">B4</button>
+                        <p class="text-[#03071280] text-[18px] font-inter font-medium mt-2">A</p>
+                        <button id="A1" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium">A1</button>
+                        <button id="A2" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium">A2</button>
+                        <button id="A3" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium ">A3</button>
+                        <button id="A4" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium ">A4</button>
+                        <p class="text-[#03071280] text-[18px] font-inter font-medium mt-2">B</p>
+                        <button id="B1" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium">B1</button>
+                        <button id="B2" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium">B2</button>
+                        <button id="B3" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium">B3</button>
+                        <button id="B4" class="btn btn-press text-[#03071280] text-[18px] font-inter font-medium">B4</button>
                     </div>
                 </div>
                 <div class="part-2 vertical-dotted-line mt-8"></div>
@@ -234,16 +234,17 @@
                         <hr class="pb-6 hr border-dashed">    
                         <div class="w-[433px] h-[580px] rounded-xl bg-[#F7F8F8] p-8">
                             <div class="flex justify-between text-[#030712] text-[16px] font-medium font-inter pb-4">
-                                <div><p>Seat</p></div>
+                                <div><p>Seat <span id="seat-increase" class="w-[20px] h-[14px] font-inter font-bold text-sm bg-[#1DD100] text-white">0</span></p></div>
                                 <div><p>Class</p></div>
                                 <div><p>Price</p></div>
                             </div>
                             <hr class="pb-4 hr border-dashed">
                             <div>
-                                <div class="flex justify-between mb-4 font-inter text-[16px] text-[#03071299]">
-                                    <p>C2</p>
-                                    <p>Economy</p>
-                                    <p>550</p>
+                                <div id="child-container" class="flex justify-between mb-4 font-inter text-[16px] text-[#03071299]">                                 
+                                    
+
+
+
                                 </div>
                             </div>
                             <hr class="pb-6 hr ">
@@ -257,7 +258,7 @@
                             </div>
                             <div class="flex justify-between mb-4 font-inter text-[16px] font-medium">
                                 <div><p>Grand Total</p></div>
-                                <div><p>BDT <span>1100</span></p></div>
+                                <div><p>BDT <span>0</span></p></div>
                             </div>
                         </div>               
                     </div>
@@ -266,6 +267,8 @@
         </section>
     </main>
     <footer></footer>
+    <script src="scripts/utility.js"></script>
+    <!-- <script src="scripts/new.js"></script> -->
 </body>
 
 </html>
