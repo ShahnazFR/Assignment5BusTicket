@@ -4,12 +4,46 @@ let newAvailableSeats = parseInt(
   document.getElementById("available-seats").innerText
 );
 
+
+// const nextBtn=document.getElementById("next-button");
+// nextBtn.classList.toggle('hidden');
+
+
 const allBtn = document.getElementsByClassName("btn-press");
 
 for (const btn of allBtn) {
   btn.addEventListener("click", function handleSelect(event) {
     count += 1;
     newAvailableSeats -= 1;
+
+
+
+    
+    const seatPosition=(event.target.innerText);
+
+    const newChildContainer=document.getElementById("new-child-container");
+
+
+    const div=document.createElement("div");
+    // p1.innerText='Economy'
+    div.classList.add("design-div");
+    const p1=document.createElement("p");
+    p1.innerText=seatPosition;
+    const p2=document.createElement("p");
+    p2.innerText='Economy'
+    const p3=document.createElement("p");
+    p3.innerText='550';
+
+    // newChildContainer.appendChild(seatNum);
+    div.appendChild(p1);
+    div.appendChild(p2);
+    div.appendChild(p3);
+    newChildContainer.appendChild(div);
+
+
+
+
+
 
     if (count < 5 && newAvailableSeats >= 4) {
       setInnerText("seat-increase", count);
@@ -36,12 +70,20 @@ function setInnerText(id, value) {
 function applyCoupon() {
     const totalCost=parseFloat(document.getElementById("total-cost").innerText);
     const couponInput = document.getElementById("coupon-input").value;
-    if (couponInput === 'NEW15') {
+    const divApply=document.getElementById("div-apply");
+
+    const firstCoupon=document.getElementById("first-coupon").innerText;
+    const secondCoupon=document.getElementById("second-coupon").innerText;
+
+    if (couponInput === firstCoupon) {
         const grandTotal = totalCost * 0.85;
         setInnerText("grand-total",grandTotal);
-    } else if (couponInput === 'Couple 20') {
+        divApply.classList.add('hidden');
+        // event.target.disabled=true;
+    } else if (couponInput === secondCoupon) {
         const grandTotal = totalCost * 0.8;
         setInnerText("grand-total",grandTotal);
+        divApply.classList.add('hidden');
     } else {
         alert('Invalid coupon code. Please enter a valid coupon.');
     }
@@ -54,3 +96,9 @@ function scrollToSection(sectionId) {
         behavior: 'smooth'
     });
 }
+
+
+// function disableButton(event){
+//     event.target.disabled=true;
+// }
+
