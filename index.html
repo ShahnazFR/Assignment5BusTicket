@@ -60,7 +60,8 @@
                             <p class="mb-12 text-[18px] text-[#FFFFFF] font-inter">Yes, you can run unit tests and view
                                 the results directly within the app. The integrated testing features allow for a
                                 streamlined .</p>
-                            <button onclick="scrollToSection('main-part')" class="btn bg-[#1DD100] border-none text-xl font-bold px-5 pt-2 pb-2 pr-6 pl-6">Buy
+                            <button onclick="scrollToSection('main-part')"
+                                class="btn bg-[#1DD100] border-none text-xl font-bold px-5 pt-2 pb-2 pr-6 pl-6">Buy
                                 Tickets</button>
                         </div>
                     </div>
@@ -139,7 +140,7 @@
                                 class="flex bg-[#1DD10026] text-[#1DD100] w-[180px] h-[56px] rounded-xl p-4 pl-8 gap-2">
                                 <div><img src="images/seat-green.png" alt=""></div>
                                 <div>
-                                    <p><span id="available-seats">8</span> Seats left</p>
+                                    <p><span id="available-seats" class="font-semibold">8</span> Seats left</p>
                                 </div>
                             </div>
                         </div>
@@ -220,38 +221,38 @@
                         </div>
                         <div>
                             <button id="A1"
-                            class="btn btn-press w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">A1</button>
+                                class="btn btn-press w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">A1</button>
                         </div>
                         <div><button id="A2"
-                            class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">A2</button>
+                                class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">A2</button>
                         </div>
                         <div>
                             <button id="A3"
-                            class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium ">A3</button>
+                                class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium ">A3</button>
                         </div>
                         <div>
                             <button id="A4"
-                            class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium ">A4</button>
+                                class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium ">A4</button>
                         </div>
                         <div>
                             <p class="text-[#03071280] text-[18px] font-inter font-medium mt-2">B</p>
                         </div>
                         <div>
                             <button id="B1"
-                            class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B1</button>
+                                class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B1</button>
                         </div>
                         <div>
                             <button id="B2"
-                            class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B2</button>
+                                class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B2</button>
                         </div>
                         <div>
                             <button id="B3"
-                            class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B3</button>
-                        </div> 
+                                class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B3</button>
+                        </div>
                         <div>
                             <button id="B4"
-                            class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B4</button>
-                        </div>                       
+                                class="btn btn-press  w-[110px] h-[56px] text-[#03071280] text-[18px] font-inter font-medium">B4</button>
+                        </div>
                     </div>
                 </div>
                 <div class="part-2 vertical-dotted-line mt-8"></div>
@@ -275,7 +276,7 @@
                             </div>
                             <hr class="pb-4 hr border-dashed">
                             <div id="new-child-container" class="mb-4 font-inter text-[16px] text-[#03071299]">
-                                
+
 
 
 
@@ -292,7 +293,7 @@
                                     <p>BDT <span id="total-cost">0</span></p>
                                 </div>
                             </div>
-                            <div id="div-apply"  class="input-wrapper mb-4">
+                            <div id="div-apply" class="input-wrapper mb-4">
                                 <input type="text" placeholder="Have any coupon?"
                                     class="w-[369px] h-[56px] text-[14px] font-inter rounded-xl p-5"
                                     id="coupon-input" />
@@ -307,9 +308,30 @@
                                     <p>BDT <span id="grand-total">0</span></p>
                                 </div>
                             </div>
-                            <!-- The button to open modal -->
-                            <!-- <label for="my_modal_6" class="btn w-[370px] h-[65px] text-xl font-extrabold text-white rounded-2xl bg-[#1DD100]">Next</label> -->
-                            <button id="next-button" class="btn w-[370px] h-[65px] text-xl font-extrabold text-white rounded-2xl bg-[#1DD100]">Next</button>
+                            <button id="next-button"
+                                class="btn w-[370px] h-[65px] text-xl font-extrabold text-white rounded-2xl bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
+
+                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                <div class="modal-box flex flex-col text-center gap-4">
+                                    <div class="w-[100px]"><img class="w-full ml-44" src="images/success.png" alt="">
+                                    </div>
+
+                                    <h2 class="text-2xl font-bold text-[#27AE60]">Success</h2>
+                                    <h3 class="text-xl font-medium text-[#4A4A4A]">Thank you for Booking Our Bus Seats.
+                                    </h3>
+                                    <p class="text-xl font-light text-[#4A4A4A]">We are working hard to find the best
+                                        service and deals for you.
+                                        Shortly you will find a confirmation in your email.</p>
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button
+                                                class="btn text-xl font-semibold bg-[#27AE60] w-[300px] h-[56px] rounded-full mr-20 text-white">Continue</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+
                         </div>
                     </div>
                 </div>
@@ -318,18 +340,7 @@
     </main>
     <footer></footer>
 
-    <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-    <div class="modal" role="dialog">
-        <div class="modal-box flex flex-col text-center gap-4">
-            <div class="w-[100px]"><img class="w-full ml-44" src="images/success.png" alt=""></div>
-            
-            <h2 class="text-2xl font-bold text-[#27AE60]">Success</h2>
-            <h3 class="text-xl font-medium text-[#4A4A4A]">Thank you for Booking Our Bus Seats.</h3>
-            <p class="text-xl font-light text-[#4A4A4A]">We are working hard to find the best service and deals for you. 
-                Shortly you will find a confirmation in your email.</p>
-            <label for="my_modal_6" class="btn text-xl font-semibold bg-[#27AE60] w-[300px] h-[56px] rounded-full ml-24 text-white">Continue</label>
-        </div>
-    </div>
+    
     <script src="scripts/utility.js"></script>
 </body>
 
