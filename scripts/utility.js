@@ -5,8 +5,8 @@ let newAvailableSeats = parseInt(
 );
 
 
-// const nextBtn=document.getElementById("next-button");
-// nextBtn.classList.toggle('hidden');
+const nextBtn=document.getElementById("next-button");
+nextBtn.disabled=true;
 
 
 const allBtn = document.getElementsByClassName("btn-press");
@@ -16,16 +16,15 @@ for (const btn of allBtn) {
     count += 1;
     newAvailableSeats -= 1;
 
+    if(count>0){
+      nextBtn.disabled=false;
+    }
 
-
-    
     const seatPosition=(event.target.innerText);
 
     const newChildContainer=document.getElementById("new-child-container");
 
-
     const div=document.createElement("div");
-    // p1.innerText='Economy'
     div.classList.add("design-div");
     const p1=document.createElement("p");
     p1.innerText=seatPosition;
@@ -34,13 +33,10 @@ for (const btn of allBtn) {
     const p3=document.createElement("p");
     p3.innerText='550';
 
-    // newChildContainer.appendChild(seatNum);
     div.appendChild(p1);
     div.appendChild(p2);
     div.appendChild(p3);
     newChildContainer.appendChild(div);
-
-
 
 
 
